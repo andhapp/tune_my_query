@@ -10,7 +10,7 @@ It is a simple way to switch between standard SQL and extended SQL syntax depend
 
 Inspiration
 -----------
-Gemcutter uses PostgreSql in production and uses ILIKE in one of the queries. For anyone, hacking on their local machine will have to change it to LIKE for it to work. Also, when it comes to accepting patches this would again pose a minor issue.
+Gemcutter uses PostgreSql in production and uses ILIKE in one of the queries. For anyone, hacking on their local machine will have to change it to LIKE for it to work. Also, when it comes to accepting patches this would again pose a minor issue. Hence, this gem.
 
 
 Usage
@@ -34,7 +34,7 @@ Yes, at the moment it only does that. But, you can fork the code and add your ow
 
 Specs
 -----
-In order to run the specs you should have mysql and postgresql installed and whilst installing postgres adapter. [Here's](http://developer.apple.com/internet/opensource/postgres.html) how to install PostgreSql on a Mac. And, just do:
+In order to run the specs you should have mysql and postgresql installed. [Here's](http://developer.apple.com/internet/opensource/postgres.html) how to install PostgreSql on a Mac. And, just do:
 
     sudo gem install postgres-pr
 
@@ -49,5 +49,5 @@ Please report the issues through gitHub's issues.
 
 Authors
 -------
-
+* John Pignata
 * Anuj Dutta - [andHapp.com](http://www.andhapp.com/blog)

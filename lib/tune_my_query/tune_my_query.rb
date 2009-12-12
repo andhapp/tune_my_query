@@ -2,7 +2,6 @@ module TuneMyQuery
   def self.included(base)
     base.class_eval do
       extend ClassMethods
-      # Why do we need to do this? Because in class_eval self and base would be same but alias_method is private in ActiveRecord::Base and therefore, it is not visible to the outside world. So, we do class << self to open up the singleton class of ActiveRecord base and extend the functionality that ways.
       class << self
         alias_method :super_merge_conditions, :merge_conditions
         alias_method :merge_conditions, :standardise_sql
