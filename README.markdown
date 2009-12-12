@@ -5,7 +5,7 @@ About
 -----
 **tune_my_query** is an extension of the gem **me_gusta** written by **John Pignata**
 
-It is a simple way to switch between standard SQL and extended SQL syntax depending on the adapter. For example: PostgreSql has an ILIKE extension which is not found in other databases like mysql. This gem ensures the query is adapted based on the current database. 
+It is a simple way to switch between standard SQL and extended SQL syntax depending on the adapter. For example: PostgreSql has an ILIKE extension which is not found in other databases like mysql. This gem(not released yet) ensures the query is adapted based on the current database. 
 
 
 Inspiration
