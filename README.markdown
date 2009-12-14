@@ -3,14 +3,14 @@ tune_my_query
 
 About
 -----
-**tune_my_query** is an extension of the gem **me_gusta** written by **John Pignata**
+**tune_my_query** is an extension of the gem **me_gusta** written by **[John Pignata]**(http://github.com/jpignata)
 
 It is a simple way to switch between standard SQL and extended SQL syntax depending on the adapter. For example: PostgreSql has an ILIKE extension which is not found in other databases like mysql. This gem(not released yet) ensures the query is adapted based on the current database. 
 
 
 Inspiration
 -----------
-Gemcutter uses PostgreSql in production and uses ILIKE in one of the queries. For anyone, hacking on their local machine will have to change it to LIKE for it to work. Also, when it comes to accepting patches this would again pose a minor issue. Hence, this gem.
+Gemcutter uses PostgreSql in production and uses ILIKE in one of the queries. For anyone, hacking on their local machine will have to change it to LIKE for it to work. Also, when it comes to accepting patches from a MySql user this would again pose a minor issue. Hence, this gem. 
 
 
 Usage
@@ -49,5 +49,10 @@ Please report the issues through gitHub's issues.
 
 Authors
 -------
-* John Pignata
-* Anuj Dutta - [andHapp.com](http://www.andhapp.com/blog)
+* [John Pignata](http://github.com/jpignata)
+* [Anuj Dutta](http://github.com/andhapp) - [andHapp.com](http://www.andhapp.com/blog)
+
+
+Roadmap
+-------
+* To make it work for any database extension. At the moment it would only for SQL extensions added by PostgreSql.
