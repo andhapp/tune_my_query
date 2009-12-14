@@ -3,7 +3,7 @@ tune_my_query
 
 About
 -----
-**tune_my_query** is an extension of the gem **me_gusta** written by **[John Pignata]**(http://github.com/jpignata)
+**tune_my_query** is an extension of the gem **me_gusta** written by **[John Pignata](http://github.com/jpignata)**
 
 It is a simple way to switch between standard SQL and extended SQL syntax depending on the adapter. For example: PostgreSql has an ILIKE extension which is not found in other databases like mysql. This gem(not released yet) ensures the query is adapted based on the current database. 
 
@@ -20,16 +20,16 @@ It is simple to use. Just install it like:
 
     sudo gem install tune_my_query
 
-And do in the model class where you have used a database specific SQL, like this:
+And do the following in the model class where you have used a database specific SQL, like this:
 
     tune_my_query :like
 
-Here like signifies the extension to usual SQL LIKE.
+Here 'like' signifies the extension to usual SQL LIKE.
 
 
 Does it only work with LIKE? What a futile effort
 -------------------------------------------------
-Yes, at the moment it only does that. But, you can fork the code and add your own commands in the commands directory inside lib. Every new command that you add should have a name ending with Command. For example: AwesomeCommand. Add a singleton execute method to it and send me a patch, I will add it in. Please do add specs. 
+Yes, at the moment it only does that. But, you can fork the code and add your own commands in the lib/commands directory. Every new command you add should have a name ending with "Command". For example: AwesomeCommand. Add a singleton "execute" method to it and send me a patch, I will add it in. Please do add specs. 
 
 
 Specs
@@ -55,4 +55,4 @@ Authors
 
 Roadmap
 -------
-* To make it work for any database extension. At the moment it would only for SQL extensions added by PostgreSql.
+* To make it work for any database extension. At the moment it would only work for PostgreSql specific SQL extensions.
