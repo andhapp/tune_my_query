@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tune_my_query}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Anuj Dutta"]
-  s.date = %q{2009-12-15}
+  s.date = %q{2009-12-16}
   s.description = %q{Switches between standard SQL and extended SQL syntax depending on the adapter.}
   s.email = %q{anuj@andhapp.com}
   s.extra_rdoc_files = [
@@ -26,11 +26,13 @@ Gem::Specification.new do |s|
      "lib/tune_my_query.rb",
      "lib/tune_my_query/commands/LikeCommand.rb",
      "lib/tune_my_query/tune_my_query.rb",
+     "pkg/tune_my_query-0.1.0.gem",
      "spec/database.yml",
      "spec/lib/tune_my_query_spec.rb",
      "spec/models.rb",
      "spec/schema.db",
-     "spec/spec_helper.rb"
+     "spec/spec_helper.rb",
+     "tune_my_query.gemspec"
   ]
   s.homepage = %q{http://github.com/andhapp/tune_my_query}
   s.rdoc_options = ["--charset=UTF-8"]
