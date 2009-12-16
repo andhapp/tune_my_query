@@ -36,11 +36,13 @@ module TuneMyQuery
     end
     
     def standardise_sql(*conditions)
-      conditions = conditions.dup
-      @adapter = connection && !connection.class.to_s.include?("PostgreSQLAdapter")
-      command = "#{@command_type.to_s.camelize}Command".constantize
-      if @adapter      
-        conditions.each { |condition| command.execute(condition) }
+      if @command_type
+        conditions = conditions.dup
+        @adapter = connection && !connection.class.to_s.include?("PostgreSQLAdapter")
+        command = "#{@command_type.to_s.camelize}Command".constantize
+        if @adapter      
+          conditions.each { |condition| command.execute(condition) }
+        end
       end
       super_merge_conditions(*conditions)
     end    

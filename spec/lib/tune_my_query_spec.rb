@@ -21,9 +21,15 @@ describe "TuneMyQuery" do
     context "for LIKE SQL command" do
       it "should convert from postgresql specific to standard SQL" do
         Auberdine.merge_conditions(["name = 'joe'"], ["address ilike 'main'"]).
-                      should  be_eql("(name = 'joe') AND (address like 'main')")
-      end          
-    end          
+                      should be_eql("(name = 'joe') AND (address like 'main')")
+      end
+      
+      it "should ensure that other model objects work normally" do
+        Exodar.merge_conditions(["name = 'joe'"]).should be_eql("(name = 'joe')")
+      end
+      
+    end
+              
   end
   
   
@@ -38,7 +44,12 @@ describe "TuneMyQuery" do
       it "should not convert from postgresql specific to standard SQL" do
         Auberdine.merge_conditions(["name = 'joe'"], ["address ilike 'main'"]).
                       should be_eql("(name = 'joe') AND (address ilike 'main')")
-      end      
+      end
+      
+      it "should ensure that other model objects work normally" do
+        Exodar.merge_conditions(["name = 'joe'"]).should be_eql("(name = 'joe')")
+      end
+            
     end
               
   end
