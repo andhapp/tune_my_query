@@ -1,0 +1,7 @@
+21 January 2011
+----------------
+
+* Upgraded to Rails3
+* Upgraded to Bundler
+* Bumped version from 0.1.1 -> 0.2.0
+
