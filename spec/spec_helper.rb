@@ -1,8 +1,11 @@
-%w(activerecord active_support yaml spec).each{|path| require path }
+#%w(activerecord active_support yaml spec).each{|path| require path }
 
-require File.join(File.dirname(__FILE__), "..", "lib", "tune_my_query")
+require "bundler"
+Bundler.setup
 
-%w(models).each{|path| require File.join(File.dirname(__FILE__), path) }
+require 'active_record'
+require File.expand_path('../../lib/tune_my_query', __FILE__)
+require File.expand_path('../models', __FILE__)
 
 def connect(adapter)
   fix_quote_ident_postgres_error if adapter == "postgres"
@@ -12,6 +15,6 @@ def connect(adapter)
 end
 
 def fix_quote_ident_postgres_error
-  require "postgres"
+  require "pg"
   def PGconn.quote_ident(name); %("#{name}") end
 end

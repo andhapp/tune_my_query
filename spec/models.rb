@@ -3,4 +3,4 @@ class Auberdine < ActiveRecord::Base
 end
 
 class Exodar < ActiveRecord::Base
-end  
+end

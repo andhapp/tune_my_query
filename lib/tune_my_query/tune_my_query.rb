@@ -5,8 +5,8 @@ module TuneMyQuery
     base.class_eval do
       extend ClassMethods
       class << self
-        alias_method :super_merge_conditions, :merge_conditions
-        alias_method :merge_conditions, :standardise_sql
+        alias_method :super_where, :where
+        alias_method :where, :standardise_sql
       end
     end
   end
@@ -44,7 +44,7 @@ module TuneMyQuery
           conditions.each { |condition| command.execute(condition) }
         end
       end
-      super_merge_conditions(*conditions)
+      super_where(*conditions)
     end
   end
 

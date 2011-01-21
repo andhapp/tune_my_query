@@ -1,12 +1,12 @@
 mysql:
    :adapter:  mysql
-   :database: tune_my_query  
+   :database: tune_my_query
    :username: root
    :hostname: localhost
-      
+
 postgres:
    :adapter:  postgresql
    :database: tune_my_query
    :username: postgres
-   :password: postgres        
+   :password: postgres
    :hostname: localhost
