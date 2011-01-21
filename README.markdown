@@ -36,9 +36,9 @@ Specs
 -----
 In order to run the specs you should have mysql and postgresql installed. [Here's](http://developer.apple.com/internet/opensource/postgres.html) how to install PostgreSql on a Mac. And, just do:
 
-    sudo gem install postgres-pr
+    sudo gem install pg
 
-to install postgreSql adapter. 
+to install postgreSql adapter or you can use bundler and install project dependencies with it.
 
 
 Bugs
